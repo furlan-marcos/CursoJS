@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(57, 124, 201);
+            color: aliceblue;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<!-- DOM - Document Objet Element - Modelo de objetos para Documenos
+    Conjunto de objetos dentro do navegador que dará acesso aos componentes internos do Website. Está presente ao rodar JS dentro do navegador.
+    
+    ------------
+    *Arvore Dom*
+    ------------
+        window (raiz)
+            location;
+            document;
+                html (parent);
+                    head (chiald);
+                        meta;
+                        title;
+                        ...
+                    body (chiald);
+                        h1;
+                        p;
+                        p;
+                            strong;
+                        div;
+            history;
+            ...
+
+    ---------------------
+    * Métodos de acesso *
+    ---------------------
+        Selecionar por:
+            Marca;          getElementsByTagName()
+            Id;             getElementById()
+            Nome;           getElementByName()
+            Classe;         getElementByClassName()
+            Seletor;        querySelector() / querySelectorAll()
+
+-->
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <br>
+    <script>
+        // window.document.write(window.document.charset)<br>
+        // window.document.write(window.document.URL)
+
+        //var p1 = window.document.getElementsByTagName('p')[1] 
+        //Primeiro paragrado [0]; segundo paragrado [1]...
+        //window.document.write(p1.innerText); 
+        //window.document.write(p1.innerHTML);   
+        //p1.style.color = 'blue' 
+
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        // d.innerText='Alternado o texto através do JavaScript'       
+        //window.document.getElementById('msg').innerText = 'Alternado o texto através do JavaScript'
+        
+        
+    </script>
+</body>
+</html>
